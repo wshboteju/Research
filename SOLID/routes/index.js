@@ -21,8 +21,8 @@ router.get('/test', function(request, response, next){
 
   var pusher = new Pusher({
         appId: '585477',
-        key: '0bc7c03255c3e38e77e',
-        secret: '8ea48df318016ae20e3',
+        key: '0bc7c03255c3e38e77e2',
+        secret: '8ea48df318016ae20e3a',
         cluster: 'ap2',
         encrypted: true
     });
