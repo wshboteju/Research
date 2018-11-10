@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/elements/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Call Center</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header id="header" id="home">
+    <div class="container">
+        <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+                <a href="index.html"><img src="img/logo1.png" alt="" title="" /></a>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html#feature">Domain</a></li>
+                    <li><a href="index.html#weoffer">Milestones</a></li>
+                    <li><a href="presentation.html">Presentations</a></li>
+                    <li><a href="documents.html">Documents</a></li>
+                    <li><a href="index.html#about">About us</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <!--
+                  <li class="menu-has-children"><a href="">Pages</a>
+                    <ul>
+                      <li><a href="generic.html">Generic</a></li>
+                      <li><a href="elements.html">Elements</a></li>
+                    </ul>
+                  </li>
+                  -->
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header><!-- #header -->
+
+<!-- Start Sample Area -->
+<section class="sample-text-area">
+    <div class="container">
+        <h3 class="text-heading" align="center"> METHODOLOGY </h3>
+        <p class="sample-text">
+            This part of the document explains how the proposed system going to be designed and implemented. Functionalities and the flow will be explained clearly with the tools and technologies which are going to be used in order to achieve the objectives of the proposed system.
+        </p>
+        <br>
+        <h6>System Overview</h6>
+        <br>
+        <p class="sample-text">
+            The entire proposed system consists of two main stages as Software and Hardware. Control center of the home appliances for the user is implementing as a web application which will be hosted in an online server. Web application has the interfaces to handle specific appliances within the house. The web server directs the request about the appliance that user need to handle towards the Arduino microcontroller via Internet. Arduino microcontroller will receive the request send by the server and sent it into the device that meant by the user.
+        </p>
+        <p class="sample-text">
+            The proposed home automation system can control the following appliances,
+        </p>
+        <p class="sample-text">
+             -Home lightning system<br>
+             -Home door, window system<br>
+             -High tech appliances (Fridge, washing machine etc)<br>
+             -Garage (Door, lightning)
+
+        </p>
+        <p class="sample-text">
+            Development of the proposed system will be consisting of,
+        </p>
+        <h6>
+            User Interface:
+        </h6><br>
+        <p>
+            This is the part where user get access to contact graphically with the home appliances. Web application will be developed with all the functionalities to fulfill the objectives of the proposed system.
+        </p>
+        <h6>
+            Hardware Interface:
+        </h6><br>
+        <p>
+            This interface is the place where that redirects the requests to the home appliances which are made at the frontend of the system by the user. The appliances may act according to the responses that coming out of the hardware interface.
+        </p>
+        <p>
+            Raspberry pi is the main microcontroller is the main device runs on the hardware interface. Many other electronic components and sensors are implementing at this part.
+        </p>
+        <h3 align="center">Functionality</h3>
+        <br>
+        <h6>Remote Controlling Doors and Windows</h6>
+        <br>
+        <p>
+            People are forgetting to lock the doors and windows sometimes. And only remembers after they travel a distance that they can’t return home just to lock the doors and windows. Below shown features can be provided to cover up the above functionality by using the proposed web application,
+        </p>
+        <p>
+            -          Interface to control doors<br>
+            -          Interface to control windows
+        </p>
+        <p>
+            To fulfill the above requirements in the web application, there has to be a circuit that connects app and the appliances.  Circuit would be connected to the door lock with a servo motor device. Only one click in the web app would be needed in order to lock the door. A Wi-Fi module will handle the communication between android app and the Arduino.
+        </p>
+        <h6>
+            Controlling high tech appliances.
+        </h6>
+        <br>
+        <p>
+            When people want to control their high tech appliances when they are far away from home, our app will provide a user friendly interface to control all the necessary appliances. User just needs to select the appliance name from the app and give the command to On or Off. This will helpful when the user can’t reach the home when thundering. For an example if meat or fish inside the refrigerator people can’t switch off the refrigerator when they are leaving home. There should be a way to control the refrigerator when they want to off.
+        </p>
+        <p>
+            So our proposed application will provide,
+        </p>
+        <p>
+            -	Interface to control the home high tech appliance<br>
+            -	Detect circuit burnings and send alerts
+        </p>
+        <h6>Automated Garage gate Controlling and Surrounding Light Control </h6>
+        <br>
+        <p>
+            Wireless Garage Gate Controllers may currently be available across the world, but with the latest IOT advancements; Our system through Image Processing, will detect the home resident’s license plate number and automatically open the garage gate when the vehicle is couple of meters from the garage. Furthermore, once the car has entered the garage, it will monitor the distance and once it’s in a safe distance, the gate sensor will close the Garage Gate. Hence saving ample time, and effort of the user.
+        </p>
+        <p>
+            That is not all that our system will handle, Through UV light sensor detection, a light outside the Home (Porch Light) will switch on when it gets closer to dusk (Evening). This light detection mechanism will also handle the lighting system inside the Garage, i.e if there is limited light supply inside the garage, and if a person or the vehicle is entering the garage, a light will be turned on; this would not only save the person some time from finding the light switch but also avoid causing any injury.
+        </p>
+        <p>
+            With so little time and so much errands to run, we as humans are always at haste with our routines, and we tend to forget to check if the garage door is closed or the light is left on; our Smart System will detect these minor details and send notifications via Server Communication to the residents, and henceforth have the ability to do the needful.
+        </p>
+        <p>
+            All this Communication will be handled between the app and the Raspberry pi, through a secured Internet Connection, that is not easily penetrable for cyber attacks.
+        </p>
+        <h6>Lighting controlling and temperature controlling automation system</h6><br>
+        <p>
+            Detect the time and environmental condition and automate the light controlling system by machine learning. Once the user of the system is away from house he or she must be able to control (ON/OFF/Dim) the lighting system of the house via the application.
+        </p>
+        <p>
+            Also detect the number of people in the room and environmental condition via sensors, by that controlling the temperature in the room by adjusting the fan or the AC. providing an interface to control system by user.
+        </p>
+
+    </div>
+
+    </div>
+</section>
+<!-- End Sample Area -->
+<!-- End banner Area -->
+
+</body>
+
+</html>

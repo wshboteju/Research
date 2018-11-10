@@ -14,10 +14,11 @@ router.get('/test', function(request, response, next){
   var channel = request.query.userid;
 
   var bulb = request.query.bulb;
+  console.log(" Pin number passed "+bulb);
 
   var action = request.query.action;
-    // from database
-    var pin = "14";
+
+    var pin = 14;
 
   var pusher = new Pusher({
         appId: '585477',
@@ -36,7 +37,8 @@ router.get('/test', function(request, response, next){
 
   console.log("Pusher triggered");
 
-  response.json({action: "Successful"});
+ //response.json({action: "Successful"});
+
 });
 
 module.exports = router;

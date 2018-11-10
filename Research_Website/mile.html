@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: Helvetica, sans-serif;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: black;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 20px 30px;
+            background-color: #DDE6EF;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+        }
+        .topnav {
+            overflow: hidden;
+            background-color:#FFFFFF ;
+        }
+
+        .topnav a {
+
+            float: right;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .topnav a:hover {
+
+            color: #117a8b;
+        }
+
+        .topnav a.active {
+
+            color: #117a8b;
+        }
+    </style>
+</head>
+<body>
+<br>
+<div class="topnav">
+    <a href="index.html#contact">CONTACT</a>
+    <a href="index.html#about">ABOUT US</a>
+    <a href="documents.html">DOCUMENTS</a>
+    <a href="presentation.html">PRESENTATIONS</a>
+    <a class="active" href="mile.html">MILESTONES</a>
+    <a href="index.html#feature">DOMAIN</a>
+    <a href="index.html">HOME</a>
+
+</div>
+
+<br>
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <h6>30th January 2018 - 14th February 2018 </h6>
+            <h4>Project Topic Assessment </h4>
+            <p>Group</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h6>23th February 2018 </h6>
+            <h4>Project Charter Submission</h4>
+            <p>Group</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h6>23th April 2018 -26th April 2018</h6>
+            <h4>Project Proposal </h4>
+            <p> Project Proposal Presentation Individual 5% </p>
+            <p> Project Proposal Presentation Report 5% </p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h6>12th May 2018 - 15th May 2018</h6>
+            <h4>Design Document Submission</h4>
+            <p> Individual 6%</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h6>22th June 2018 </h6>
+            <h4>Progress Presentation 1   (50%)</h4>
+            <p>Individual 10%</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h6>23th July 2018</h6>
+            <h4>Project Status Document submission</h4>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h6>9th August 2018</h6>
+            <h4>Research paper submission</h4>
+            <p>Group and Individual 10%</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h6>3rd September 2018</h6>
+            <h4>Final Report Draft </h4>
+            <p>Group and Individual </p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h6>26th September 2018</h6>
+            <h4>Progress Presentation II</h4>
+            <p>Individual 18%</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h6>26th September 2018</h6>
+            <h4>Web Assessment & Research</h4>
+            <p>Group 4%</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
